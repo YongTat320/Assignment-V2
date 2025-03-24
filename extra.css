@@ -1,0 +1,210 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #57351d; /* 替换为朋友 CSS 中的颜色 */
+    background-color: #fff2dc; /* 替换为朋友 CSS 中的颜色 */
+}
+
+header {
+    background-color: #6a3712; /* 替换为朋友 CSS 中的颜色 */
+    color: lavender; /* 替换为朋友 CSS 中的颜色 */
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.nav-options {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-options a {
+    color: lavender; /* 替换为朋友 CSS 中的颜色 */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-options a:hover {
+    color: #e98b487f; /* 替换为朋友 CSS 中的颜色 */
+}
+
+.nav-food {
+    background-color: #d3af70; /* 替换为朋友 CSS 中的颜色 */
+    padding: 10px 40px;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.search {
+    position: relative;
+}
+
+.search a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: lavender; /* 替换为朋友 CSS 中的颜色 */
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search a:hover {
+    background-color: #e98b487f; /* 替换为朋友 CSS 中的颜色 */
+}
+
+.list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list li {
+    padding: 10px 20px;
+}
+
+.list li a {
+    color: #57351d; /* 替换为朋友 CSS 中的颜色 */
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.list li a:hover {
+    color: #e98b487f; /* 替换为朋友 CSS 中的颜色 */
+}
+
+.nav >.search:hover >.list {
+    max-height: 500px;
+}
+
+main {
+    padding: 40px;
+}
+
+main h1 {
+    font-size: 24px;
+    color: #82461b; /* 替换为朋友 CSS 中的颜色 */
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+   
+}
+
+.item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.picture {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.item-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.item-info h2 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #57351d; /* 替换为朋友 CSS 中的颜色 */
+}
+
+.item-info p {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: rgba(93, 93, 93, 0.641); /* 替换为朋友 CSS 中的颜色 */
+}
+
+.item-price {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+.item input[type="button"] {
+    background-color: #e98b487f; /* 替换为朋友 CSS 中的颜色 */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.item input[type="button"]:hover {
+    background-color: #d3af70; /* 替换为朋友 CSS 中的颜色 */
+}
+
+.promotion .item {
+    background-color: #f9ddac; /* 替换为朋友 CSS 中的颜色 */
+    border-color: #f1c40f;
+}
+
+.promotion .item h2 {
+    color: #6a3712; /* 替换为朋友 CSS 中的颜色 */
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-options {
+        margin-top: 10px;
+    }
+
+    .item {
+        flex-direction: column;
+    }
+
+    .picture {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}    
